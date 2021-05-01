@@ -70,7 +70,7 @@ const Login = ({navigation}) => {
         />
         <Input
           value={password}
-          placeholder={'Password'}
+          placeholder={'password'}
           label={'Password'}
           onChangeText={text => setPassword(text)}
           secureTextEntry={visibility}

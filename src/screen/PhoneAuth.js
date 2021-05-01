@@ -22,12 +22,16 @@ const PhoneAuth = ({navigation}) => {
 
   // Handle the button press
   const signInWithPhoneNumber = async () => {
-    const confirmation = await auth().signInWithPhoneNumber(phone);
-    console.log(confirmation);
-    if (confirmation._auth._authResult) {
-      navigation.navigate('Otp', {confirmation: confirmation});
+    if (phone === '') {
+      alert('Enter the Phone No');
     } else {
-      alert('Internal Error');
+      const confirmation = await auth().signInWithPhoneNumber(`+91${phone}`);
+      console.log(confirmation);
+      if (confirmation._auth._authResult) {
+        navigation.navigate('Otp', {confirmation: confirmation});
+      } else {
+        alert('Internal Error');
+      }
     }
   };
 

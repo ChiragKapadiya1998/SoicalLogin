@@ -27,10 +27,14 @@ const Otp = ({navigation, route}) => {
   }, []);
 
   const confirmCode = async () => {
-    try {
-      await confirm.confirm(code);
-    } catch (error) {
-      console.log('Invalid code.');
+    if (code === '') {
+      alert('Enter the Otp');
+    } else {
+      try {
+        await confirm.confirm(code);
+      } catch (error) {
+        alert('Invalid code.');
+      }
     }
   };
 

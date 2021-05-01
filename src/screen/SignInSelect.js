@@ -18,6 +18,7 @@ import {
 } from '@react-native-community/google-signin';
 import auth from '@react-native-firebase/auth';
 import {LoginManager, AccessToken} from 'react-native-fbsdk';
+import {CommonActions} from '@react-navigation/native';
 
 const SignInSelect = ({navigation}) => {
   useEffect(() => {
@@ -40,7 +41,12 @@ const SignInSelect = ({navigation}) => {
       await auth()
         .signInWithCredential(credential)
         .then(user => {
-          navigation.navigate('Loading');
+          navigation.dispatch(
+            CommonActions.reset({
+              index: 0,
+              routes: [{name: 'Home'}],
+            }),
+          );
         });
     } catch (error) {
       console.log('error', error);
@@ -65,7 +71,12 @@ const SignInSelect = ({navigation}) => {
     await auth()
       .signInWithCredential(facebookCredential)
       .then(user => {
-        navigation.navigate('Loading');
+        navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [{name: 'Home'}],
+          }),
+        );
       });
   };
   return (

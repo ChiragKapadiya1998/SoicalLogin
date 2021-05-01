@@ -43,6 +43,7 @@ const Input = ({
         <TextInput
           placeholder={placeholder}
           autoCapitalize={'none'}
+          placeholderTextColor={'#000'}
           value={value}
           onChangeText={onChangeText}
           secureTextEntry={secureTextEntry}
