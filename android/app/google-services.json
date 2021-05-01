@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "786085117254",
+    "project_id": "auth-login-727bf",
+    "storage_bucket": "auth-login-727bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786085117254:android:a96e1c1d1d30a5cac4b947",
+        "android_client_info": {
+          "package_name": "com.googleauthlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786085117254-juhudji5c0drv8705mtbn5rfg3rhp8uf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.googleauthlogin",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "786085117254-pfjrieufcaql4mi830koehrtcsdu3sje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWYRK-D1mECaoeJIVtcEIP5CmauxyHT00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786085117254-pfjrieufcaql4mi830koehrtcsdu3sje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
